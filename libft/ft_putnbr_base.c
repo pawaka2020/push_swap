@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 /*
 PARAMETERS:
 1.'nbr' is the original number 

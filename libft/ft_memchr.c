@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <string.h>
+
 //kinda same as ft_strchr? searching until the nth element of s) (checked)
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -12,12 +12,14 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 //The ft_*.c files use these libraries. Make sure to include "libft.h" in each
 # include <stdlib.h>
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
 # include <ctype.h>
+
 //Prototypes for Libft project
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

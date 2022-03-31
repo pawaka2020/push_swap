@@ -12,13 +12,17 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+
 //for using 'write' function
 # include <unistd.h>
+
 // for malloc and free
 # include <stdlib.h>
+
 //for using va_start, va_arg, va_copy, va_end
 //ft_printf is a variadic function
 # include <stdarg.h>
+
 //required .c files
 # include "libft.h"
 

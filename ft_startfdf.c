@@ -41,7 +41,7 @@ void	ft_buildst(t_psvars *v, int argc, char **argv, int test)
 	int	i;
 
 	i = -1;
-	v->size = argc -1;
+	v->size = argc - 1;
 	v->sizea = v->size;
 	v->sizeb = 0;
 	v->a = ft_convert(argc, argv, 0);
