@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_twointegers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: riramli <riramli@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,27 +13,13 @@
 #include "../pushswap.h"
 
 /*
-Shift down all elements of stack a by 1.
-The last element becomes the first one.
+for a 2 integer sort, either the array is already sorted (0 1) or not (1 0)
+we already ruled out sorted ones with ft_alreadysorted, so we only have to
+deal with (1 0) by performing the sa command.
 */
-char	*ft_rra(t_psvars *v, int debug)
+void	ft_twointegers(t_psvars v, int showresult)
 {
-	int	i;
-
-	i = v->sizea - 1;
-	if (v->sizea > 1)
-	{
-		v->i0 = v->a[i];
-		while (i > 0)
-		{
-			v->a[i] = v->a[i - 1];
-			i--;
-		}
-		v->a[i] = v->i0;
-	}
-	v->cmd = "rra\n";
-	v->count = v->count + 1;
-	if (debug)
-		ft_presult(*v);
-	return (v->cmd);
+	ft_printf("%s", ft_sa(&v, 0));
+	if (showresult == 1)
+		ft_showsortresult(v);
 }

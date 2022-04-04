@@ -48,6 +48,8 @@ int	ft_valid(int argc, char **argv)
 	a = ft_intonly(argc, argv);
 	b = ft_withinlimits(argc, argv);
 	c = ft_noduplicates(argc, argv);
+	if (argc == 1)
+		exit (0);
 	if (a && b && c)
 		return (1);
 	return (0);
@@ -60,7 +62,8 @@ int	ft_valid(int argc, char **argv)
 //if not print error and exit immediately
 int	main(int argc, char **argv)
 {
+	ft_adjustparams(&argc, &argv);
 	if (!ft_valid(argc, argv))
 		ft_printerror("Error\n");
-	ft_startfdf(argc, argv, 0);
+	ft_start(argc, argv, 0);
 }

@@ -15,7 +15,7 @@ LARGE = 392 2 30 138 1750 902 1049 601 1389 1119 1406 1269 1716 499 160 1493 203
 #RROR if float/double
 all:
 	make -C $(LIBFT)/
-	gcc $(FLAG) *.c algos/*.c cmds/*c $(LIBFT)/$(LIBFT).a -o $(NAME)
+	gcc $(FLAG2) *.c algos/*.c cmds/*c $(LIBFT)/$(LIBFT).a -o $(NAME)
 clean:
 	make clean -C $(LIBFT)/
 fclean: clean

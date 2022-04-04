@@ -26,6 +26,8 @@ Rotate Stack A until 1 is found
 Move 1 to Stack B
 Repeat until Stack A is empty
 Move all integers back to Stack A for the result
+this is straightforward but very inefficient, so this is not used.
+However, this is a good starting point to learn how to do sorting.
 */
 void	ft_insertion(t_psvars v, int showresult)
 {

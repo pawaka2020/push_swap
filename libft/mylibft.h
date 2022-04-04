@@ -24,5 +24,7 @@ To use, simply include this header into your project header.
 //additional functions not included in either libraries
 //prints error message, then terminates program using exit (0)
 void	ft_printerror(char *message);
+//frees string array
+void	ft_freestra(char **stra);
 
 #endif

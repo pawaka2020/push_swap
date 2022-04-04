@@ -44,7 +44,8 @@ typedef struct s_convert
 	int	i;
 }t_convert;
 //core functions
-void	ft_startfdf(int argc, char **argv, int showresult);
+void	ft_adjustparams(int *argc, char ***argv);
+void	ft_start(int argc, char **argv, int showresult);
 void	ft_perror(char *str);
 void	ft_presult(t_psvars v);
 int		*ft_convert(int argc, char **argv, int debug);
@@ -52,6 +53,9 @@ int		ft_alreadysorted(t_psvars v);
 int		ft_withinlimits(int argc, char **argv);
 int		ft_noduplicates(int argc, char **argv);
 //algos
+void	ft_twointegers(t_psvars v, int showresult);
+void	ft_threeintegers(t_psvars v, int showresult);
+void	ft_fourintegers(t_psvars v, int showresult);
 void	ft_insertion(t_psvars v, int showresult);
 void	ft_binaryradix(t_psvars v, int showresult);
 void	ft_showsortresult(t_psvars v);

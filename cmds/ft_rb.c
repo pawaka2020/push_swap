@@ -20,17 +20,13 @@ char	*ft_rb(t_psvars *v, int debug)
 {
 	int	i;
 
-	i = 0;
+	i = -1;
 	if (v->sizeb > 1)
 	{
-		while (i < v->sizeb - 1)
-		{
-			v->i0 = v->b[i];
-			v->i1 = v->b[i + 1];
-			v->b[i] = v->i1;
-			v->b[i + 1] = v->i0;
-			i++;
-		}
+		v->i0 = v->b[0];
+		while (i++, i < v->sizeb - 1)
+			v->b[i] = v->b[i + 1];
+		v->b[i] = v->i0;
 	}
 	v->cmd = "rb\n";
 	v->count = v->count + 1;

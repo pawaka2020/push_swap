@@ -14,6 +14,6 @@
 
 void	ft_printerror(char *message)
 {
-	ft_printf("%s", message);
+	write(2, message, ft_strlen(message));
 	exit (0);
 }

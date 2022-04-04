@@ -20,6 +20,7 @@ the stack size (since if stack size is 5, the highest rank is 4)
 If highest rank is 4, binary is 100 thus expected return value is 3.
 We can simply do this by using bitwise operator >> 'removing' right-most digits
 if highest rank is 4 we are expected to only be able to use >>1 3 times
+This algo is very efficient for large stack sizes, but not for small ones.
 */
 int	ft_getdigits(int sizea)
 {

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_freestra.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: riramli <riramli@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,30 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../pushswap.h"
+#include "mylibft.h"
 
 /*
-Shift down all elements of stack a by 1.
-The last element becomes the first one.
+Frees a string array
 */
-char	*ft_rra(t_psvars *v, int debug)
+void	ft_freestra(char **stra)
 {
 	int	i;
 
-	i = v->sizea - 1;
-	if (v->sizea > 1)
-	{
-		v->i0 = v->a[i];
-		while (i > 0)
-		{
-			v->a[i] = v->a[i - 1];
-			i--;
-		}
-		v->a[i] = v->i0;
-	}
-	v->cmd = "rra\n";
-	v->count = v->count + 1;
-	if (debug)
-		ft_presult(*v);
-	return (v->cmd);
+	i = -1;
+	while (i++, stra[i])
+		free(stra[i]);
+	free(stra);
 }

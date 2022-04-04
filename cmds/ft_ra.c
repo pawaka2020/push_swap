@@ -20,17 +20,13 @@ char	*ft_ra(t_psvars *v, int debug)
 {
 	int	i;
 
-	i = 0;
+	i = -1;
 	if (v->sizea > 1)
 	{
-		while (i < v->sizea - 1)
-		{
-			v->i0 = v->a[i];
-			v->i1 = v->a[i + 1];
-			v->a[i] = v->i1;
-			v->a[i + 1] = v->i0;
-			i++;
-		}
+		v->i0 = v->a[0];
+		while (i++, i < v->sizea - 1)
+			v->a[i] = v->a[i + 1];
+		v->a[i] = v->i0;
 	}
 	v->cmd = "ra\n";
 	v->count = v->count + 1;
